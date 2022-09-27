@@ -58,14 +58,15 @@ internal object GeofencingConstants {
             "golden_gate_bridge",
             R.string.golden_gate_bridge_hint,
             R.string.golden_gate_bridge_location,
-            LatLng(37.819927, -122.478256)),
+            LatLng( 30.60006912624438, 31.505667742329276)),
 
         LandmarkDataObject(
             "ferry_building",
             R.string.ferry_building_hint,
             R.string.ferry_building_location,
             LatLng(37.795490, -122.394276)),
-
+//val latitude = 30.60006912624438
+//        val longitude = 31.505667742329276
         LandmarkDataObject(
             "pier_39",
             R.string.pier_39_hint,

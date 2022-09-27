@@ -79,6 +79,7 @@ class HuntMainActivity : AppCompatActivity() {
             this)).get(GeofenceViewModel::class.java)
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
+        // entry point for geofence
         geofencingClient = LocationServices.getGeofencingClient(this)
 
         // Create channel for notifications
@@ -102,6 +103,7 @@ class HuntMainActivity : AppCompatActivity() {
             checkDeviceLocationSettingsAndStartGeofence(false)
         }
     }
+
 
     /*
      *  When the user clicks on the notification, this method will be called, letting us know that
@@ -335,7 +337,7 @@ class HuntMainActivity : AppCompatActivity() {
                         Toast.makeText(this@HuntMainActivity, R.string.geofences_not_added,
                             Toast.LENGTH_SHORT).show()
                         if ((it.message != null)) {
-                            Log.w(TAG, it.message)
+                            Log.w(TAG, it.message!!)
                         }
                     }
                 }
