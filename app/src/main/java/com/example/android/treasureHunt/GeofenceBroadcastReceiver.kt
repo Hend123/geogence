@@ -50,6 +50,7 @@ class GeofenceBroadcastReceiver : BroadcastReceiver() {
                 Log.v(TAG, context.getString(R.string.geofence_entered))
 
                 val fenceId = when {
+
                     geofencingEvent.triggeringGeofences.isNotEmpty() ->
                         geofencingEvent.triggeringGeofences[0].requestId
                     else -> {
